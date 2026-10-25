@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Student extends Model
+{
+    protected $fillable = [
+        'name',
+        'email',
+        'student_id',
+        'ethnicity',
+        'race',
+        'age',
+        'major',
+        'transfer_status',
+        'first_gen',
+        'international',
+        'student_class',
+    ];
+
+    protected $casts = [
+        'name' => 'string',
+        'email' => 'string',
+        'student_id' => 'string',
+        'ethnicity' => 'string',
+        'race' => 'string',
+        'major' => 'string',
+        'student_class' => 'string',
+        'age' => 'integer',
+        'transfer_status' => 'boolean',
+        'first_gen' => 'boolean',
+        'international' => 'boolean',
+    ];
+}
