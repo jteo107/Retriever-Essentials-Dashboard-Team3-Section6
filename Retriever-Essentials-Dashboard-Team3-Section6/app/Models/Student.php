@@ -9,7 +9,7 @@ class Student extends Model
     protected $fillable = [
         'name',
         'email',
-        'student_id',
+        'studentID',
         'ethnicity',
         'race',
         'age',
@@ -23,7 +23,7 @@ class Student extends Model
     protected $casts = [
         'name' => 'string',
         'email' => 'string',
-        'student_id' => 'string',
+        'studentID' => 'string',
         'ethnicity' => 'string',
         'race' => 'string',
         'major' => 'string',

@@ -25,28 +25,35 @@ class StudentsTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('name')
+                    ->label('Student Name')
                     ->searchable(),
                 TextColumn::make('email')
-                    ->label('Email address')
+                    ->label('Email Address')
                     ->searchable(),
                 TextColumn::make('studentID')
+                    ->label('Student ID')
                     ->searchable(),
                 TextColumn::make('ethnicity')
-                    ->searchable(),
+                    ->label('Ethnicity'),
                 TextColumn::make('race')
-                    ->searchable(),
+                    ->label('Race'),
                 TextColumn::make('age')
                     ->numeric()
+                    ->label('Age')
                     ->sortable(),
                 TextColumn::make('major')
-                    ->searchable(),
+                    ->label('Major'),
                 IconColumn::make('transfer_status')
+                    ->label('Transfer Status')
                     ->boolean(),
                 IconColumn::make('first_gen')
+                    ->label('First Gen Status')
                     ->boolean(),
                 IconColumn::make('international')
+                    ->label('International Status')
                     ->boolean(),
                 IconColumn::make('student_class')
+                    ->label('Student Class')
                     ->boolean(),
             ])
             ->filters([
