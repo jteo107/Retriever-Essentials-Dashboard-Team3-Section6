@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Students\Pages;
 use App\Filament\Resources\Students\StudentResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
+use App\Filament\Widgets\StudentStatsOverview;
 
 class ListStudents extends ListRecords
 {
@@ -14,6 +15,13 @@ class ListStudents extends ListRecords
     {
         return [
             CreateAction::make(),
+        ];
+    }
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            StudentStatsOverview::class,
         ];
     }
 }

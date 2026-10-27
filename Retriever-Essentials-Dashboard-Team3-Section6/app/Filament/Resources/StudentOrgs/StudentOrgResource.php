@@ -16,6 +16,7 @@ use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use App\Filament\Resources\StudentOrgs\RelationManagers\StudentsRelationManager;
+use App\Filament\Widgets\StudentStatsOverview;
 
 class StudentOrgResource extends Resource
 {
@@ -54,6 +55,13 @@ class StudentOrgResource extends Resource
             'create' => CreateStudentOrg::route('/create'),
             'view' => ViewStudentOrg::route('/{record}'),
             'edit' => EditStudentOrg::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            StudentStatsOverview::class,
         ];
     }
 }
