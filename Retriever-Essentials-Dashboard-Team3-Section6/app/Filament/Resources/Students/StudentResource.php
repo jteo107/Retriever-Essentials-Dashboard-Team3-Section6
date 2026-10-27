@@ -15,6 +15,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use App\Filament\Resources\Students\RelationManagers\StudentOrgsRelationManager;
 
 class StudentResource extends Resource
 {
@@ -22,7 +23,7 @@ class StudentResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Student';
+    protected static ?string $recordTitleAttribute = 'name';
 
     public static function form(Schema $schema): Schema
     {
@@ -42,7 +43,7 @@ class StudentResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            StudentOrgsRelationManager::class,
         ];
     }
 

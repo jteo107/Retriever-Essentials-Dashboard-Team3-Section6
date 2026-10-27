@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Student extends Model
 {
@@ -33,4 +34,9 @@ class Student extends Model
         'first_gen' => 'boolean',
         'international' => 'boolean',
     ];
+
+    public function studentOrgs(): BelongsToMany
+    {
+        return $this->belongsToMany(StudentOrg::class);
+    }
 }
