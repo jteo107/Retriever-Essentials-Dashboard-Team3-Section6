@@ -26,8 +26,20 @@ class StudentForm
                     ->required(),
                 TextInput::make('ethnicity')
                     ->label('Ethnicity'),
-                TextInput::make('race')
-                    ->label('Race'),
+                Select::make('race')
+                    ->label('Race')
+                    ->options([
+                        'white' => 'White',
+                        'black' => 'Black or African American',
+                        'asian' => 'Asian',
+                        'hispanic' => 'Hispanic or Latino',
+                        'pacific_islander' => 'Pacific Islander',
+                        'middle_eastern' => 'Middle Eastern or North African',
+                        'native_american' => 'Native American or Indigenous',
+                        'multiracial' => 'Mixed',
+                        'other' => 'Other',
+                        'not_specified' => 'Not Specified/Prefer not to say'
+                    ]),
                 TextInput::make('age')
                     ->label('Age')
                     ->numeric(),

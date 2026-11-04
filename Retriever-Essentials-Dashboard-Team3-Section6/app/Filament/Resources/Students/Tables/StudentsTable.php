@@ -36,7 +36,20 @@ class StudentsTable
                 TextColumn::make('ethnicity')
                     ->label('Ethnicity'),
                 TextColumn::make('race')
-                    ->label('Race'),
+                    ->label('Race')
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'white' => 'White',
+                        'black' => 'Black or African American',
+                        'asian' => 'Asian',
+                        'hispanic' => 'Hispanic or Latino',
+                        'pacific_islander' => 'Pacific Islander',
+                        'middle_eastern' => 'Middle Eastern or North African',
+                        'native_american' => 'Native American or Indigenous',
+                        'multiracial' => 'Mixed',
+                        'other' => 'Other',
+                        'not_specified' => 'Not Specified/Prefer not to say',
+                        default => $state,
+                    }),
                 TextColumn::make('age')
                     ->numeric()
                     ->label('Age')
