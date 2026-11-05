@@ -5,7 +5,7 @@ namespace App\Filament\Resources\StudentOrgs\Pages;
 use App\Filament\Resources\StudentOrgs\StudentOrgResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
-use App\Filament\Widgets\StudentStatsOverview;
+use App\Filament\Resources\Students\Widgets\StudentStatsOverview;
 
 class ListStudentOrgs extends ListRecords
 {
