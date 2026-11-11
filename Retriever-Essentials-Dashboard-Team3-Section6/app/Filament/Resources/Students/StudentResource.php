@@ -16,7 +16,7 @@ use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use App\Filament\Resources\Students\RelationManagers\StudentOrgsRelationManager;
-use App\Filament\Widgets\StudentStatsOverview;
+use App\Filament\Resources\Students\Widgets\StudentStatsOverview;
 
 class StudentResource extends Resource
 {
